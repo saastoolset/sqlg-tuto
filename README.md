@@ -10,8 +10,34 @@ sqlg  repository for tutorial
 This repository contains **Dockerfile** of [apache-airflow](https://github.com/apache/incubator-airflow) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/saastoolset/sqlg-airflow/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
 
-
-
+- [1. The proposed environment](#1-the-proposed-environment)
+- [2. Envirioment preparation](#2-envirioment-preparation)
+  - [2.1. Create github repo by fork](#21-create-github-repo-by-fork)
+  - [2.2. Pull db image](#22-pull-db-image)
+- [3. Database install and run script](#3-database-install-and-run-script)
+  - [3.1 Start container](#31-start-container)
+    - [3.1.1. Windows](#311-windows)
+    - [3.1.2. Linux](#312-linux)
+    - [3.1.3. Mac](#313-mac)
+  - [3.2 Connect by sql client](#32-connect-by-sql-client)
+  - [3.3 Build SQLEXT](#33-build-sqlext)
+    - [3.3.1 Create database and Sehema from sql client tool](#331-create-database-and-sehema-from-sql-client-tool)
+    - [3.3.2 Install SQLEXT from sql client tool](#332-install-sqlext-from-sql-client-tool)
+  - [3.4 Install tutorial](#34-install-tutorial)
+    - [3.4.1 Build training data](#341-build-training-data)
+    - [3.4.2 Build studend list](#342-build-studend-list)
+  - [3.5 Install SQLG and ODBC](#35-install-sqlg-and-odbc)
+    - [3.5.1 Install SQLG](#351-install-sqlg)
+    - [3.5.2 config ODBC](#352-config-odbc)
+    - [3.5.3 Create or Alter [TRNADM]](#353-create-or-alter-trnadm)
+- [4. Conduct Training](#4-conduct-training)
+  - [4.1 For instructor](#41-for-instructor)
+  - [4.2 For student](#42-for-student)
+- [5. SQLG in db to db](#5-sqlg-in-db-to-db)
+- [6. SQLG in web application](#6-sqlg-in-web-application)
+- [7. SQLG in Data Vault](#7-sqlg-in-data-vault)
+- [8. SQLG in dbt](#8-sqlg-in-dbt)
+- [9. Wanna help?](#9-wanna-help)
 ***
 # 1. The proposed environment 
 Follwing step will assume those tools are installed
@@ -28,8 +54,10 @@ Follwing step will assume those tools are installed
 
 2. Clone sqlg-tuto from github
   - Suggest directory as C:\Proj\saastoolset\sqlg-tutor
-   
-3. Pull image 
+
+
+## 2.2. Pull db image   
+. Pull image 
 
     C:> docker pull mcr.microsoft.com/mssql/server
   
@@ -53,6 +81,7 @@ Follwing step will assume those tools are installed
 
 ## 3.2 Connect by sql client
 - Use SSMS in MSSQL
+  
     ServerName: 127.0.0.1
     Authentication: SQL Server Authentication
     Login: sa
@@ -87,20 +116,44 @@ Open doc/
 - Collect studend list
 - Build studend list
 
+## 3.5 Install SQLG and ODBC
+### 3.5.1 Install SQLG
+- download and run [addinstall.bat](https://ibm.ent.box.com/folder/167973666600?s=i2a1z26ga114wdq7rnmrjoavp9mx9mfb)
+
+### 3.5.2 config ODBC
+- ODBC configuration
+  
+    ServerName: 127.0.0.1
+    DSN: IBMTRN
+    Database: Tutor
+    Login: sa
+    Password: MyPassw0rd
+
+### 3.5.3 Create or Alter [TRNADM]
+- TRNADM use ODBC link to fetch studend progress into Excel
+- Report display on [pvtProgress]
+
+
 # 4. Conduct Training
 ## 4.1 For instructor
-
+- {STUD_ID}=ODP00
+- Demo
+- Track [pvtProgress]
+- 
 ## 4.2 For student
+- set {STUD_ID}=ODP?? follow instructor's name list
+- Perform exercise follow training material
+- Feedback issue on channel
+
 
 # 5. SQLG in db to db
-
 
 # 6. SQLG in web application
 
 # 7. SQLG in Data Vault
 
-# 7. SQLG in dbt
+# 8. SQLG in dbt
 
-# 8. Wanna help?
+# 9. Wanna help?
 
 Fork, improve and PR.
