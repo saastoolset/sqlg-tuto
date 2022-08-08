@@ -59,7 +59,9 @@ Follwing step will assume those tools are installed
 ## 2.2. Pull db image   
 . Pull image 
 
+```
     C:> docker pull mcr.microsoft.com/mssql/server
+```
   
 # 3. Database install and run script
 
@@ -67,25 +69,36 @@ Follwing step will assume those tools are installed
 ## 3.1 Start container 
 
 ### 3.1.1. Windows
-- Start by option and open in browser, e.g. tutorial model
+
+. Start by option and open in browser, e.g. tutorial model
     
-    C:> docker run --name mssql-h1 -d -p 1433:1433 -e "MSSQL_SA_PASSWORD=MyPassw0rd" -e "ACCEPT_EULA=Y" mcr.microsoft.com/mssql/server
+```
+C:> docker run --name mssql-h1 -d -p 1433:1433 -e "MSSQL_SA_PASSWORD=MyPassw0rd" -e "ACCEPT_EULA=Y" mcr.microsoft.com/mssql/server
+```
 
 ### 3.1.2. Linux
 - Start by option and open in browser, e.g. tutorial model    
-    $ docker run --name mssql-h1 -d -p 1433:1433 -e 'MSSQL_SA_PASSWORD=MyPassw0rd' -e 'ACCEPT_EULA=Y' mcr.microsoft.com/mssql/server
+
+```
+$ docker run --name mssql-h1 -d -p 1433:1433 -e 'MSSQL_SA_PASSWORD=MyPassw0rd' -e 'ACCEPT_EULA=Y' mcr.microsoft.com/mssql/server
+```
 
 ### 3.1.3. Mac
-- Start by option and open in browser, e.g. tutorial model    
-    $ docker run --name mssql-h1 -d -p 1433:1433 -e 'MSSQL_SA_PASSWORD=MyPassw0rd' -e 'ACCEPT_EULA=Y' mcr.microsoft.com/mssql/server
+- Start by option and open in browser, e.g. tutorial model 
+  
+```
+$ docker run --name mssql-h1 -d -p 1433:1433 -e 'MSSQL_SA_PASSWORD=MyPassw0rd' -e 'ACCEPT_EULA=Y' mcr.microsoft.com/mssql/server
+```
 
 ## 3.2 Connect by sql client
 - Use SSMS in MSSQL
   
-    ServerName: 127.0.0.1
-    Authentication: SQL Server Authentication
-    Login: sa
-    Password: MyPassw0rd
+```
+  ServerName: 127.0.0.1
+  Authentication: SQL Server Authentication
+  Login: sa
+  Password: MyPassw0rd
+```
 
 ## 3.3 Build SQLEXT
 
@@ -102,7 +115,7 @@ Follwing step will assume those tools are installed
 - fn_AddBusinessDays.sql, Business day function on working calendar
 - etldate.sql, ETL date function for SQLG macro
 - sp_drop_if_exists.ddl, Drop if function for MSSQL
-
+  
 
 ## 3.4 Install tutorial
 Open doc/
@@ -123,11 +136,13 @@ Open doc/
 ### 3.5.2 config ODBC
 - ODBC configuration
   
+```
     ServerName: 127.0.0.1
     DSN: IBMTRN
     Database: Tutor
     Login: sa
     Password: MyPassw0rd
+```
 
 ### 3.5.3 Create or Alter [TRNADM]
 - TRNADM use ODBC link to fetch studend progress into Excel
