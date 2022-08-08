@@ -136,6 +136,7 @@ $ docker run --name mssql-h1 -d -p 1433:1433 -e 'MSSQL_SA_PASSWORD=MyPassw0rd' -
 
 ### 3.5.2 config ODBC
 - ODBC configuration
+
 ![ODBC setup](doc/Resources/odbc-setup.png)  
 
 ```
