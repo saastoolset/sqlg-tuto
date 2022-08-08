@@ -110,7 +110,7 @@ $ docker run --name mssql-h1 -d -p 1433:1433 -e 'MSSQL_SA_PASSWORD=MyPassw0rd' -
 
 ### 3.3.2 Install SQLEXT from sql client tool
 
-- schema.ddl, Create schema for all data zone
+- Create schema for all data zone, may create schema.ddl by project
 - holiday.ddl, Holiday table for working calendar
 - fn_AddBusinessDays.sql, Business day function on working calendar
 - etldate.sql, ETL date function for SQLG macro
