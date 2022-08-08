@@ -24,10 +24,10 @@ Follwing step will assume those tools are installed
 
 ## 2.1. Create github repo by fork
 
-1. [create fork from sqlg-tuto](https://github.com/saastoolset/sqlg-tuto/fork)
+1. [create fork from sqlg-tutor](https://github.com/saastoolset/sqlg-tutor/fork)
 
 2. Clone sqlg-tuto from github
-  - Suggest directory as C:\Proj\saastoolset\sqlg-tuto
+  - Suggest directory as C:\Proj\saastoolset\sqlg-tutor
    
 3. Pull image 
 
@@ -94,9 +94,13 @@ Open doc/
 
 # 5. SQLG in db to db
 
+
 # 6. SQLG in web application
 
+# 7. SQLG in Data Vault
 
-# 7. Wanna help?
+# 7. SQLG in dbt
+
+# 8. Wanna help?
 
 Fork, improve and PR.
