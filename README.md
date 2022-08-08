@@ -119,7 +119,7 @@ $ docker run --name mssql-h1 -d -p 1433:1433 -e 'MSSQL_SA_PASSWORD=MyPassw0rd' -
 
 ## 3.4 Install tutorial
 - [Tutorial PPT](doc/LI-BDM-Train-v2.1.pptx)
-- [Tutorial DI](doc/LI_TRN_Data Inventory_STD_v2.1-instructuor.xlsm)
+- [Tutorial DI](doc/LI_TRN_DI_v2.1-instructuor.xlsm)
 
 ### 3.4.1 Build training data
 - Verify by sql client 
