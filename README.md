@@ -104,7 +104,7 @@ $ docker run --name mssql-h1 -d -p 1433:1433 -e 'MSSQL_SA_PASSWORD=MyPassw0rd' -
 
   SQLEXT use for ETL date conversion function when call from stored procedure from scheduler.
 
-### 3.3.1 Create database and Sehema from sql client tool
+### 3.3.1 Create database and Schema from sql client tool
 - For tutorial, create DB name as Tutor, schema SQLEXT and TRN are requried
 - For implementation project setup, schema will mapping to data zone.
 
